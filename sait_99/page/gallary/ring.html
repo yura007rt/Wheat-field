@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ювелирный салон Маркиз</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/sbros.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/style.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/icon/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/slaid_bar.css"/>
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body>
+<!--Прелоудер-->
+<div id="p-preloader" class="preloader">
+    <div class="loader"></div>
+</div>
+<!--Мини Прелоудер-->
+<div id="mini_load">
+    <div class="mini_loader"></div>
+</div>
+<!--Место для загрузки формы обратной свзяи-->
+<div>
+    <div id="page_form_email">
+
+    </div>
+</div>
+<!--Рекламное окно-->
+<div id="reklama">
+    <div class="fon_slaid_reklam">
+        <div class="forma_reklam">
+            <span id="reklama_off" class="icon-cancel-circle"></span>
+            <h2>Вас заинтересовала наша коллекция?</h2>
+            <h3>Только в эти дни спец предложение: <span class="blue">СКИДКА</span> на все изделия 20%</h3>
+            <h3>Позвоните или напишете нам!</h3>
+            <div id="icon_reklama">
+                <span class="icon-envelop"></span>
+                <span class="icon-mobile"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Меню-->
+<nav id="menu">
+    <ul>
+        <li class="menu_li"><a href="/" class="menu_a" >Главная</a></li>
+        <li class="menu_li"><a href="uslugi" class="menu_a" >Услуги</a></li>
+        <li class="menu_li"><a href="woman_gallary" class="menu_a" >Галлерея</a></li>
+        <li class="menu_li"><a href="contact" class="menu_a" >О нас</a></li>
+    </ul>
+</nav>
+<!--Обёртка-->
+<div class="wrapper">
+    <div class="maincontent">
+        <div id="get_form_email"><a href="email_form" class="historyAPI"><span  class="icon-envelop"></span></a></div>
+
+        <section>
+            <section class="page">
+                <!--4 Страница(Женская коллекция)-->
+                <section  class="four" >
+                    <div class="menu_p4">
+                        <img src="/images/fon4.png" class="load" style="display:none;">
+                        <ul>
+                            <li class="menu_li_p4" id="ring"><a class="mini_button" href="ring">Кольца</a></li>
+                            <li class="menu_li_p4" id="cepochki"><a class="mini_button" href="cepochki">Цепочки</a></li>
+                            <li class="menu_li_p4" id="braslet_wooman"><a class="mini_button" href="braslet_woman">Браслеты</i></a></li>
+                            <li class="menu_li_p4" id="sergi"><a class="mini_button" href="sergi">Серьги</a></li>
+                        </ul>
+                    </div>
+                    <!--Асинхронный контент-->
+                    <sectoin>
+                            <section class="main_content_p4">
+                                <div class="fon_gallary">
+                                    <div class="exite"><i class="icon-cancel-circle"></i></div>
+                                    <div class="slidershow-container">
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/1ring_1.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/1ring_2.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/1ring_3.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/2ring.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/3ring.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/4ring.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/5ring.jpg" style="width:100%">
+                                        </figure>
+                                        <figure class="mySlides fade">
+                                            <img class="load" src="/images/gallary/slaid/6ring.jpg" style="width:100%">
+                                        </figure>
+                                    </div>
+                                    <div>
+                                        <div class="navigaation">
+                                            <a onclick="plusSlides(1)" class="next">&#10095</a>
+                                            <a onclick="plusSlides(-1)" class="prev">&#10094</a>
+                                        </div>
+                                    <br>
+                                    <div class="dots" style="text-align:center;">
+                                        <span class="dot" onclick="currentSlide(1)"></span>
+                                        <span class="dot" onclick="currentSlide(2)"></span>
+                                        <span class="dot" onclick="currentSlide(3)"></span>
+                                        <span class="dot" onclick="currentSlide(4)"></span>
+                                        <span class="dot" onclick="currentSlide(5)"></span>
+                                        <span class="dot" onclick="currentSlide(6)"></span>
+                                        <span class="dot" onclick="currentSlide(7)"></span>
+                                        <span class="dot" onclick="currentSlide(8)"></span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var slideIndex=1;
+                                    showSlides(slideIndex);
+                                    function plusSlides(n){
+                                        showSlides(slideIndex += n);
+                                    }
+
+                                    function currentSlide(n){
+                                        showSlides(slideIndex = n);
+                                    }
+
+                                    function showSlides(n){
+                                        var i;
+                                        var slides = document.getElementsByClassName("mySlides");
+                                        var dots = document.getElementsByClassName("dot");
+
+                                        if(n > slides.length){
+                                            slideIndex = 1;
+                                        }
+                                        if(n < 1){
+                                            slideIndex = slides.length;
+                                        }
+                                        for(i=0; i<slides.length; i++){
+                                            slides[i].style.display = "none";
+                                        }
+                                        for(i=0; i < dots.length; i++){
+                                            dots[i].className = dots[i].className.replace("active","");
+                                        }
+                                        slides[slideIndex-1].style.display = "block";
+                                        dots[slideIndex-1].className+= " active";
+                                    }
+                                </script>
+                            </section>
+                    </sectoin>
+                        <div class="black_fon_p4">
+                            <h2 class="nazvanie_p1">Женская коллекция</h2>
+                        </div>
+                </section>
+            </section>
+        </section>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

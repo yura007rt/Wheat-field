@@ -1,0 +1,482 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4d9cc8;
+}
+body {
+    color: #222;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+
+}
+.container {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+}
+.clearfix:after,
+.clearfix,
+.clearfix:before {
+    content: '';
+    display: table;
+    clear: both;
+}
+/*menu*/
+nav#menu{
+    position: fixed;
+    z-index: 10;
+    margin: 0;
+    top:30px;
+    left:10px;
+    width:100%;
+    height: 45px;
+}
+
+ul{
+    list-style: none;
+}
+.menu_li{
+    display: inline-block;
+}
+.menu_a{
+    font-size:1.1em;
+    text-decoration: none;
+    color:black;
+    background: white;
+    padding:10px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+nav ul li a.active{
+    background: black;
+    color:white;
+    padding:10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    background: black;
+    color:white;
+    padding:10px;
+    border-radius: 3px;
+    text-decoration: none;
+    opacity: 0.65;
+
+}
+
+
+/*Обёртка Главной страницы*/
+.wrapper {
+    height: 100%;
+}
+
+.maincontent {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    -webkit-transition: top 1s ease-in-out;
+    -moz-transition: top 1s ease-in-out;
+    -ms-transition: top 1s ease-in-out;
+    -o-transition: top 1s ease-in-out;
+    transition: top 1s ease-in-out;
+}
+.page {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+.wrapper>.maincontent>section{
+   height: 100%;
+}
+
+/*page 1*/
+.one{
+    height:100%;
+    background-image: url("/images/fon11.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+.black_fon{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    padding: 60px 0 60px 0;
+    margin:0;
+}
+.nazvanie_p1{
+    padding:8px 0;
+    font-size: 2.5em;
+    color: #1a6eff;
+    text-shadow: 1px 1px 1px #111;
+    line-height: 1.1em;
+    margin:0;
+}
+.prosto_text{
+    margin-top:36px;
+    font-size: 1.4em;
+    color: #b2b4aa;
+    text-shadow: 1px 1px 1px #111;
+}
+/**/
+
+/*page 2*/
+.two{
+    height:100%;
+    background-image: url("/images/fon2.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.black_fon_p2{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    padding: 0 100px 0 100px;
+    margin:0;
+    text-shadow: 1px 1px 1px #111;
+    font-size: 1.1em;
+}
+#text_uslug{
+    position: relative;
+    margin-top:15%;
+    text-align: left;
+    padding-left: 70px;
+    font-size: 0.9em;
+}
+.zagolovok_uslug{
+    font-size: 2.5em;
+    color: #1a6eff;
+    text-shadow: 1px 1px 1px #111;
+    line-height: 1.1em;
+    margin:0;
+    padding-left: 70px;
+}
+span.white_p2{
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #111;
+}
+.blue{
+    color: #1a6eff;
+}
+.text_usl{
+    margin-top:20px;
+    font-size: 2.5em;
+}
+.opisanie_ualug{
+    position: relative;
+    font-size: 1.5em;
+    color: #bfc1b7;
+}
+/*иконки на 2 странице*/
+.icon-credit-card, .icon-hammer, .icon-wrench, .icon-cart{
+    position: absolute;
+    color: #1a6eff;
+    font-size:1.3em;
+    left:4px;
+    margin-top: 4px;
+}
+.icon-info{
+    font-size:0.7em;
+    position: absolute;
+    color: #ffffff;
+    right:-25px;
+    margin-top:7px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.icon-info:hover{
+    color: #1a6eff;
+}
+
+
+/*page 3*/
+.three{
+    height:100%;
+    background-image: url("/images/fon3.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.black_fon_p3{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    padding: 60px 0 60px 0;
+    margin:0;
+}
+.button{
+    font-size: 1.5em;
+    background: #1a6eff;
+    color:white;
+    padding:25px 30px 25px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#woman_button{
+    float: left;
+    margin-top:5%;
+    margin-left:4%;
+}
+#man_button{
+    float: right;
+    margin-top:5%;
+    margin-right:4%;
+}
+
+
+/*page 4*/
+.four{
+    height:100%;
+    background-image: url("/images/fon4.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.black_fon_p4{
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    padding: 30px 0 30px 0;
+    margin:0;
+}
+.menu_p4{
+    position: absolute;
+    top:91%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+
+}
+.menu_li_p4{
+    display: inline-block;
+}
+.mini_button{
+    font-size: 1.1em;
+    background: #1a6eff;
+    color:white;
+    padding:10px 15px 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#braslet, #ring{
+    padding:40px 0 40px 0;
+    margin-left: 15px;
+}
+#pechatki{
+    padding:40px 0 40px 0;
+}
+
+/*page 6*/
+.six{
+    height:100%;
+    background-image: url("/images/fon6.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.black_fon_p6{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    padding: 0 100px 0 100px;
+    margin:0;
+    text-shadow: 1px 1px 1px #111;
+    font-size: 1.1em;
+}
+.text_usl_p6{
+    position: relative;
+    margin-top:15%;
+    text-align: left;
+    font-size: 1.5em;
+}
+.icon-vk, .icon-mobile, .icon-envelop{
+    color:#1a6eff;
+    font-size: 1.3em;
+    left:0;
+    margin-right: 10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.icon-vk:hover, .icon-mobile:hover, .icon-envelop:hover{
+    color: #ffffff;
+}
+.inform{
+    text-align: left;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px #111;;
+    color:#1a6eff;
+    margin-top: 10px;
+}
+
+
+/*Форма обратной связи*/
+#get_form_email{
+    position: fixed;
+    top:10px;
+    right:10px;
+    z-index:10;
+    font-size: 2.5em;
+
+}
+#get_form_email a{
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    color:#1a6eff;
+}
+
+#get_form_email a:hover{
+    color:#ffffff;
+}
+#email_form{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    z-index: 100;
+}
+#fon_form_email{
+    width: 320px;
+    height: 430px;
+    border: solid 3px #1a6eff;
+    text-align: center;
+    background: #b3b5ab ;
+}
+#comment{
+    min-height: 100px;
+    min-width: 200px;
+    max-height: 100px;
+    max-width: 200px;
+}
+.form_input{
+    padding:10px 15px 10px 15px;
+    margin-top:5px;
+    border:solid 3px #1a6eff;
+}
+#submit{
+    margin-top:20px;
+    padding:10px 15px 10px 15px;
+}
+#email_form_off{
+    position: absolute;
+    top:3px;
+    right:3px;
+    color:#1a6eff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 2em;
+}
+#email_form_off:hover{
+    color:#ffffff;
+}
+.icon-user{
+    top:0;
+    font-size: 5em;
+    padding: 3px;
+    margin:1px;
+    color:#1a6eff;
+}
+/*Ошибка*/
+#msg{
+    bottom:0;
+    color:#1a6eff;
+}
+
+/*Спеиально предложение(Рекламное окно)*/
+#reklama{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    z-index: 999;
+    display: none;
+}
+.fon_slaid_reklam{
+    padding:12px;
+    border: 3px inset #1a6eff;
+    background-color: #b3b5ab;
+    height: 300px;
+    width: 300px;
+    font-size: 2em;
+    text-align:  center;
+    text-shadow: 1px 1px 1px #111;
+}
+#reklama_off{
+    position: absolute;
+    top:3px;
+    right:3px;
+    color:#1a6eff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+#reklama_off:hover{
+    color:#ffffff;
+}
+.activ{
+    color:#ffffff;
+    background-color: #000000;
+}
+/*Телефон*/
+@media screen and (max-width: 480px) {
+        html {
+            -webkit-text-size-adjust: none;
+        }
+    .menu_a{
+        font-size:0.8em;
+}
+    .mini_button{
+        font-size:0.8em;
+    }
+    .zagolovok_uslug{
+        font-size:1.5em;
+    }
+    #text_uslug{
+        font-size:0.5em;
+    }
+}
+
+
+

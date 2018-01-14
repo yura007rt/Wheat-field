@@ -1,0 +1,97 @@
+.main_content_p4{
+	position: relative;
+}
+.fon_gallary{
+	position: absolute;
+	top:250px;
+	left:40%;
+	width: 300px;
+}
+.slidershow-container{
+	position: relative;
+	margin: auto;
+
+}
+.navigaation{
+	position: absolute;
+	top:300px;
+	width: 300px;
+}
+.dots{
+	position: absolute;
+	top: 345px;
+	left: 70px;
+}
+.prev, .next{
+	cursor: pointer;
+	position: absolute;
+	top: 99%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color:#1a6eff;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	z-index: 12;
+}
+
+.next{
+	right:0;
+}
+.prev{
+	left:7px;
+}
+.exite{
+	position: absolute;
+	top:7px;
+	right: 1px;
+	font-size: 2em;
+	z-index: 4;
+	color:#1a6eff;
+}
+.exite:hover{
+	color:#ffffff;
+}
+.prev:hover, .next:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+.mySlides{
+	position: absolute;
+	text-align: center;
+	font-size: 1em;
+}
+img.load{
+	border: 3px #1a6eff solid;
+}
+
+.dot{
+	cursor: pointer;
+	height: 13px;
+	width: 13px;
+	margin: 0 2px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+
+}
+.active, .dot:hover{
+	background-color: #1a6eff;
+
+}
+.fade{
+	-webkit-animation-name: fade;
+	-webkit-animation-duration:1s;
+	animation-name:fade;
+	animation-duration:1s;
+}
+/*@-webkit-keyframes fade{
+	0%{opacity:0.4;}
+	100%{opacity:1;}
+}*/
+@keyframes fade{
+	0%{opacity:0.4;}
+	100%{opacity:1;}
+}

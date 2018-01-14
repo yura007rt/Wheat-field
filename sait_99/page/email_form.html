@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ювелирный салон Маркиз</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/sbros.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/style.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/icon/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/slaid_bar.css"/>
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body>
+<!--Прелоудер-->
+<div id="p-preloader" class="preloader">
+<div class="loader"></div>
+</div>
+<!--Мини Прелоудер-->
+<div id="mini_load">
+    <div class="mini_loader"></div>
+</div>
+<!--Место для загрузки формы обратной свзяи-->
+<div>
+    <div id="page_form_email">
+        <form id="email_form" method="post">
+            <div id="fon_form_email">
+                <span id="email_form_off" class="icon-cancel-circle"></span>
+                <div><span class="icon-user"></span></div>
+                <div><h3>Свяжитесь с нами, если у вас возники вопросы. Мы всегда рады вам помочь.</h3></div>
+                <div>
+                    <input class="form_input" type="email" id="email" name="email" placeholder="Введите ваш email." required="required"/>
+                </div>
+                <div>
+                    <input class="form_input" type="text" id="name" name="subject" placeholder="Как к вам обращаться?" required="required"/>
+                </div>
+                <div>
+                    <textarea  class="form_input" id="comment" name="description" placeholder="Сообщение нам."></textarea>
+                </div>
+                <div><p class="bg-info" id="msg"></p></div>
+                <input type="submit" id="submit" value="Отправить"/>
+            </div>
+        </form>
+    </div>
+</div>
+<!--Рекламное окно-->
+<div id="reklama">
+    <div class="fon_slaid_reklam">
+        <div class="forma_reklam">
+            <span id="reklama_off" class="icon-cancel-circle"></span>
+            <h2>Вас заинтересовала наша коллекция?</h2>
+            <h3>Только в эти дни спец предложение: <span class="blue">СКИДКА</span> на все изделия 20%</h3>
+            <h3>Позвоните или напишете нам!</h3>
+            <div id="icon_reklama">
+                <span class="icon-envelop"></span>
+                <span class="icon-mobile"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Меню-->
+<nav id="menu">
+    <ul>
+        <li class="menu_li"><a href="/" class="menu_a" >Главная</a></li>
+        <li class="menu_li"><a href="uslugi" class="menu_a" >Услуги</a></li>
+        <li class="menu_li"><a href="woman_gallary" class="menu_a" >Галлерея</a></li>
+        <li class="menu_li"><a href="contact" class="menu_a" >О нас</a></li>
+    </ul>
+</nav>
+<!--Обёртка-->
+<div class="wrapper">
+    <div class="maincontent">
+        <div id="get_form_email"><a href="email_form" class="historyAPI"><span  class="icon-envelop"></span></a></div>
+        <!--1 Страница(Главная)-->
+        <section>
+            <section class="page">
+                <div class="one">
+                    <div class="black_fon">
+                        <h2 class="nazvanie_p1">Добро пожаловать на сайт Ювелирного Салона</h2>
+                        <h1 class="nazvanie_p1">Маркиз</h1>
+                        <p class="prosto_text">Здесь вы можете познакомиться с нашими работами, а также узнать об услагах предоставляемых нами.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    (function($){
+        /*ВАЛИДАЦИЯ email формы*/
+        var pattern = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+        var mail = $('#email'),
+            name = $('#name'),
+            comment = $('#comment');
+        $("#submit").click(function(e){
+            e.preventDefault();
+            console.log("validate");
+            if(!mail.val()){
+                mail.css('border-color', 'red');
+                return false;
+            }
+            else{
+                if(mail.val().search(pattern) == 0){
+                    mail.css('border-color', 'green');
+                    var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+                    e.preventDefault();
+                    var formData = $("#email_form").serialize();
+                    $("#msg").text("Подождите, идёт отправка сообщения...");
+                    $.ajax({
+                        url: fullUrl+'/send',
+                        type: 'POST',
+                        data: formData,
+                        success: function(result) {
+                            if (!name.val()) {
+                                name.css('border-color', 'red');
+                            }
+                            else {
+                                name.css('border-color', 'green');
+                            }
+                            if (!comment.val()) {
+                                comment.css('border-color', 'red');
+                            }
+                            else {
+                                comment.css('border-color', 'green');
+                            }
+                            $("#msg").empty().text(result);
+                            /*Очистка формы после отправки*/
+                            mail.val("");
+                            name.val("");
+                            comment.val("");
+
+                        },
+                        error: function(e) {
+                            $("#msg").empty().text("Сообщение не было отправленно, Error code:"+e.status +", Error message:"+e.statusText);
+                        },
+                        dataType: "html",
+                        timeout: 60000
+                    });
+                }else{
+                    mail.css('border-color', 'red');
+                    return false
+                }
+                return false
+            }
+        });
+    })(jQuery);
+</script>
